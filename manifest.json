@@ -1,0 +1,20 @@
+{
+    "name": "一行十文化",
+    "short_name": "一行十",
+    "start_url": "/index.html",
+    "display": "standalone",
+    "background_color": "#0e5073",
+    "theme_color": "#1a3a5a",
+    "icons": [
+        {
+            "src": "icon.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "icon.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
