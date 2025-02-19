@@ -1,215 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-      杭州一行十文化传播有限公司 - 人人都是文化传承与创新的参与者和受益者 - OneToHi - 文化微尘
-    </title>
-    <meta
-      name="description"
-      content="杭州一行十文化传播有限公司以传承中华文化精髓、赋能新时代文化创新为使命，通过多元化的媒介形式与创新服务，搭建连接历史与未来、文化与生活的桥梁。提供文化数字化传播、精品文化视频创作、文创生态开发等核心业务。让每个人成为文化传承的参与者和受益者。让文化微尘生长出新的可能。"
-    />
-    <meta
-      name="keywords"
-      content="杭州一行十文化传播有限公司,文化传承,文化传播,文化数字化传播,文化创新,OneToHi,文化微尘,文化生活,精品文化视频创作,文创生态开发"
-    />
-    <style>
-      * {
-        margin: 0;
-        box-sizing: border-box;
-        font-family: '微软雅黑', Arial, sans-serif;
-      }
 
-      body {
-        background-color: #0e5073;
-        color: #ffffff;
-        min-width: 300px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="description" content="杭州一行十文化传播有限公司：专注文化传承与创新，从事文化数字化传播、文创生态建设，搭建文化桥梁" />
+  <meta name="keywords" content="一行十,文化传播,文化传承,文化创新,文化生活,文化数字化,文创商城,文化微尘,OneToHi" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://one2ten.xyz" />
+  <meta property="og:title" content="一行十 - 让文化微尘生长出新的可能 | 文化微尘 | OneToHi" />
+  <meta property="og:description" content="杭州一行十文化传播有限公司：专注文化传承与创新，从事文化数字化传播、文创生态建设，搭建文化桥梁" />
+  <meta property="og:image"
+    content="https://6865-herebookstore-6g84xp2kfd9db564-1332688787.tcb.qcloud.la/official/bg.jpg" />
+  <link rel="canonical" href="https://one2ten.xyz" />
+  <link rel="stylesheet" href="styles.css" />
+  <title>一行十 - 让文化微尘生长出新的可能 | 文化微尘 | OneToHi</title>
+</head>
 
-      .header {
-        width: 100%;
-        height: 80px;
-        background-color: #1a3a5a;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 0 10%;
-        position: fixed;
-        z-index: 1000;
-      }
+<body>
+  <header>
+    <h1 role="banner">
+      <a href="/" aria-label="杭州一行十文化传播有限公司 官方网站" title="杭州一行十文化传播有限公司">一行十文化</a>
+    </h1>
+    <nav role="navigation">
+      <ul>
+        <li>
+          <a href="#services" title="查看核心业务" aria-label="核心业务">服务</a>
+        </li>
+        <li>
+          <a href="#we" title="了解公司详情" aria-label="公司详情">我们</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-      .logo {
-        font-size: 24px;
-        font-weight: bold;
-      }
-
-      .nav {
-        display: flex;
-        gap: 30px;
-      }
-
-      .nav a {
-        color: #ffffff;
-        text-decoration: none;
-      }
-
-      .nav a:hover {
-        color: #78c0d4;
-        transition: color 0.3s ease;
-      }
-
-      .banner {
-        height: 600px;
-        background: linear-gradient(
-            rgba(26, 58, 90, 0.9),
-            rgba(26, 58, 90, 0.9)
-          ),
-          url('https://6865-herebookstore-6g84xp2kfd9db564-1332688787.tcb.qcloud.la/official/bg.jpg?sign=059c0c9514ef4f62880b2f8bf2ef958d&t=1739889450');
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-      }
-
-      .banner h1 {
-        font-size: 48px;
-        margin-bottom: 20px;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-      }
-
-      .banner p {
-        font-size: 18px;
-        line-height: 1.6;
-        max-width: 800px;
-      }
-
-      .services {
-        padding: 50px 10%;
-        background-color: #0e5073;
-      }
-
-      .services h2 {
-        text-align: center;
-        font-size: 36px;
-        margin-bottom: 50px;
-      }
-
-      .service-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 30px;
-      }
-
-      .service-item {
-        background-color: #1a3a5a;
-        padding: 30px;
-        border-radius: 10px;
-        text-align: center;
-        transition: transform 0.3s ease;
-      }
-
-      .service-item:hover {
-        transform: translateY(-10px);
-      }
-
-      .service-item h3 {
-        font-size: 24px;
-        margin-bottom: 15px;
-      }
-
-      .service-item p {
-        color: #cccccc;
-        line-height: 1.6;
-      }
-
-      .me-container {
-        background-color: #0e5073;
-        display: flex;
-        gap: 10px;
-        padding: 20px 10%;
-      }
-
-      .module {
-        background-color: #1a3a5a;
-        flex: 1;
-        min-width: 300px;
-        padding: 10px 5%;
-        border-radius: 10px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      }
-
-      @media (max-width: 768px) {
-        .banner h1 {
-          font-size: 36px;
-        }
-
-        .me-container {
-          flex-direction: column;
-        }
-      }
-
-      .module h2 {
-        margin-bottom: 20px;
-      }
-
-      .qr-code-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 20px;
-      }
-
-      .qr-code {
-        text-align: center;
-      }
-
-      .qr-code img {
-        width: 150px;
-        height: 150px;
-      }
-
-      .qr-code p {
-        font-size: 14px;
-        color: #666;
-      }
-
-      .footer {
-        background-color: #0e5073;
-        padding: 40px 10%;
-        text-align: center;
-      }
-
-      .footer p {
-        font-size: 14px;
-        line-height: 1.6;
-      }
-    </style>
-  </head>
-
-  <body>
-    <header class="header">
-      <div class="logo">一行十文化</div>
-      <nav class="nav">
-        <a href="#services">服务</a>
-        <a href="#we">我们</a>
-      </nav>
-    </header>
-
+  <main>
     <section class="banner">
-      <div>
-        <h1>人人都是文化传承的参与者和受益者</h1>
+      <article>
+        <h2>传承创新 - 人人参与，人人受益</h2>
         <p>
-          杭州一行十文化传播有限公司是一家以传承中华文化精髓、赋能新时代文化创新为使命的综合性机构。立足传统，拥抱科技，致力于通过多元化的媒介形式与创新服务，搭建连接历史与未来、文化与生活的桥梁。
+          杭州一行十文化传播有限公司，是一家以传承中华文化精髓、赋能新时代文化创新为使命的综合性机构。立足传统，拥抱科技，致力于通过多元化的媒介形式与创新服务，搭建连接历史与未来、文化与生活的桥梁。
         </p>
-      </div>
+      </article>
     </section>
 
     <section class="services" id="services">
-      <h2>核心业务领域</h2>
+      <h2>核心业务 - 文化数字化生态建设</h2>
       <div class="service-grid">
-        <div class="service-item">
+        <article class="service-item" role="service">
           <h3>文化数字化传播</h3>
           <p>
             「OneToHi」以在线游客互助、智能化、互动方式呈现定点互助式社交分享平台。
@@ -217,77 +55,89 @@
           <p>
             「文化微尘」将以智能分享、互动的方式呈现传统文化中不易察觉的魅力，让用户体会到传统文化在生活点滴中的妙用。
           </p>
-        </div>
-        <div class="service-item">
-          <h3>精品文化视频创作</h3>
+        </article>
+        <article class="service-item" role="service">
+          <h3>精品文化视频</h3>
           <p>
-            非遗技艺解密、地方民俗探源、文物故事新说。联合文化创作团队，打造《文化微尘》等系列文化IP短视频，让厚重文化焕发轻盈活力。
+            非遗技艺解密、地方民俗探源、文物故事新说。联合文化创作团队，打造《文化微尘》等系列文化 IP 短视频，让厚重文化焕发轻盈活力。
           </p>
-        </div>
-        <div class="service-item">
-          <h3>文创生态开发</h3>
+        </article>
+        <article class="service-item" role="service">
+          <h3>文创生态建设</h3>
           <p>
             「文化+生活」兼具审美价值与实用功能的文创产品。从非遗联名艺术衍生品到节气主题生活美学套装，同步开通线上商城与线下体验空间，让传统文化以现代设计语言融入日常。
           </p>
           <p>
             通过「文化微尘」小程序平台沉浸式体验游览线上文化展馆、参与非遗技艺互动课程、购买相关主题文创产品，并一键获取定制化文化知识库，让文化触手可及。
           </p>
-        </div>
+        </article>
       </div>
     </section>
 
     <section class="services">
-      <h2>创新价值体系</h2>
+      <h2>创新价值 - 数字技术赋能传统文化</h2>
       <div class="service-grid">
-        <div class="service-item">
+        <article class="service-item" role="service">
           <h3>科技赋能</h3>
-          <p>运用AR虚拟场景、AI文化助手等技术重构文化体验场景</p>
-        </div>
-        <div class="service-item">
+          <p>
+            运用 AR 虚拟场景、AI 文化助手等技术重构文化体验，让用户身临其境地感受文化的魅力
+          </p>
+        </article>
+        <article class="service-item" role="service">
           <h3>跨界融合</h3>
-          <p>联合博物馆、非遗传承人、新锐设计师构建文化创新联盟</p>
-        </div>
-        <div class="service-item">
+          <p>
+            联合博物馆、非遗传承人、新锐设计师构建文化创新联盟，推动文化创新发展
+          </p>
+        </article>
+        <article class="service-item" role="service">
           <h3>教育增值</h3>
-          <p>开发青少年文化素养课程与企业文化定制服务</p>
-        </div>
+          <p>
+            开发青少年文化素养课程与企业文化定制服务，为不同群体提供丰富多样的个性化的文化教育方案
+          </p>
+        </article>
       </div>
     </section>
-
     <section class="me-container" id="we">
-      <div class="module">
-        <h2>关注我们</h2>
+      <article class="module">
+        <h2>我们的成果</h2>
         <div class="qr-code-container">
-          <div class="qr-code">
-            <img
-              src="https://6865-herebookstore-6g84xp2kfd9db564-1332688787.tcb.qcloud.la/sys/s.jpg?sign=92972e0f63f088af4115c8f0d10b1885&t=1739888481"
-              alt="公众号二维码"
-            />
-            <p>公众号</p>
-          </div>
-          <div class="qr-code">
-            <img
-              src="https://6865-herebookstore-6g84xp2kfd9db564-1332688787.tcb.qcloud.la/sys/s.jpg?sign=92972e0f63f088af4115c8f0d10b1885&t=1739888481"
-              alt="小程序二维码"
-            />
-            <p>小程序</p>
-          </div>
+          <figure class="qr-code">
+            <img src="https://6865-herebookstore-6g84xp2kfd9db564-1332688787.tcb.qcloud.la/sys/s.jpg"
+              alt="公众号二维码 - 此处书店" title="关注公众号" loading="lazy" />
+            <figcaption>公众号 - 此处书店</figcaption>
+          </figure>
+          <figure class="qr-code">
+            <img src="https://6865-herebookstore-6g84xp2kfd9db564-1332688787.tcb.qcloud.la/sys/s.jpg"
+              alt="小程序二维码 - OneToHi" title="体验小程序" loading="lazy" />
+            <figcaption>小程序 - OneToHi</figcaption>
+          </figure>
         </div>
-      </div>
-
-      <div class="module">
-        <h2>联系我们</h2>
-        <div style="line-height: 1.6">
-          <p>地址：-</p>
-          <p>电话：-</p>
-          <p>邮箱：-</p>
-        </div>
-      </div>
+      </article>
+      <article class="module">
+        <h2>交流合作</h2>
+        <address style="line-height: 1.6">
+          <p>地址：浙江省杭州市拱墅区华电弄76号二楼2469室</p>
+          <p>电话：<a href="tel:19295819619">(+86)192-9581-9619</a></p>
+          <p>
+            邮箱：<a href="mailto:contact@one2ten.xyz">contact@one2ten.xyz</a>
+          </p>
+        </address>
+      </article>
     </section>
+  </main>
+  <footer>
+    <p style="font-style: italic">让文化微尘生长出新的可能</p>
+    <p role="copyright">
+      &copy;
+      <time id="copyrightYear"></time>
+      杭州一行十文化传播有限公司 版权所有
+    </p>
+  </footer>
+  <script>
+    const timeEl = document.getElementById("copyrightYear");
+    timeEl.textContent = new Date().getFullYear();
+    timeEl.setAttribute("datetime", timeEl.textContent);
+  </script>
+</body>
 
-    <footer class="footer">
-      <p style="font-style: italic">让文化微尘生长出新的可能</p>
-      <p>&copy; 2025 杭州一行十文化有限公司 版权所有</p>
-    </footer>
-  </body>
 </html>
