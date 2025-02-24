@@ -1,0 +1,230 @@
+@import url('_variables.css');
+@import url('_mixins.css');
+
+/* 动画效果 */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 基本样式 */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.7;
+    /* 调整行高 */
+    color: var(--text-primary);
+    margin: 0;
+    background: var(--bg-light);
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 语义化头部 */
+header.hero-header {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 7rem 2rem;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    /* 调整阴影 */
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    /* 增加 transform 过渡 */
+}
+
+header.hero-header:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    /* 调整阴影 */
+    transform: translateY(-3px);
+    /* 增加 hover 效果 */
+}
+
+header.hero-header h1 {
+    font-size: 3.5rem;
+    margin: 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+header.hero-header p {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    /* 调整颜色 */
+}
+
+/* 主内容区：产品网格 */
+main {
+    max-width: 1300px;
+    margin: -5rem auto 4rem;
+    padding: 0 2rem;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3.5rem;
+}
+
+/* 产品卡片样式 */
+article.product-card {
+    background: white;
+    border-radius: 24px;
+    padding: 3rem;
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    animation: fadeUp 0.6s ease-out forwards;
+}
+
+article.product-card:hover {
+    transform: translateY(-8px);
+    /* 调整 hover 效果 */
+    box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.3);
+    /* 调整阴影 */
+}
+
+/* 徽章样式 */
+.badge {
+    background: var(--accent-gradient);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 20px;
+    font-size: 1rem;
+    display: inline-block;
+    margin-bottom: 1.2rem;
+    font-weight: 500;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
+    /* 调整阴影 */
+    transition: transform 0.3s ease;
+    /* 增加 transform 过渡 */
+}
+
+.badge:hover {
+    transform: scale(1.1);
+    /* 增加 hover 效果 */
+}
+
+/* 核心价值显示 */
+.core-value {
+    border-left: 4px solid;
+    border-image: var(--secondary-gradient) 1;
+    padding: 1.7rem 2.2rem;
+    margin: 2.2rem 0;
+    background: var(--bg-light);
+    border-radius: 0 12px 12px 0;
+}
+
+/* 二维码区样式 */
+.qr-section {
+    background: white;
+    border-radius: 16px;
+    padding: 2.2rem;
+    text-align: center;
+    margin-top: 2.2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+    /* 调整阴影 */
+}
+
+.qr-section:hover {
+    transform: scale(1.04);
+    /* 调整 hover 效果 */
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.15);
+    /* 调整阴影 */
+}
+
+/* 引用样式 */
+blockquote {
+    border-left: 4px solid var(--accent-gradient);
+    padding: 1.4rem 2.7rem;
+    margin: 2.2rem 0;
+    background: var(--bg-light);
+    border-radius: 0 12px 12px 0;
+    font-style: italic;
+    color: var(--text-secondary);
+    transition: background 0.3s ease, transform 0.3s ease;
+    /* 增加 transform 过渡 */
+}
+
+blockquote:hover {
+    background: #eef2f6;
+    transform: translateX(5px);
+    /* 增加 hover 效果 */
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+    main {
+        padding: 0 1rem;
+        margin-top: -3rem;
+    }
+
+    header.hero-header {
+        padding: 5rem 1rem;
+    }
+
+    header.hero-header h1 {
+        font-size: 3rem;
+    }
+
+    article.product-card {
+        padding: 2rem;
+    }
+
+    .product-grid {
+        gap: 2.5rem;
+    }
+}
+
+/* 新增动效：产品图标效果 */
+.product-icon {
+    width: 70px;
+    height: 70px;
+    margin-bottom: 1.7rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
+    /* 调整阴影 */
+}
+
+article.product-card:hover .product-icon {
+    transform: scale(1.2) rotate(7deg);
+    /* 调整 hover 效果 */
+    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.18);
+    /* 调整阴影 */
+}
+
+/* 页脚样式 */
+footer {
+    background: var(--bg-dark);
+    color: #f0f0f0;
+    padding: 2.5rem;
+    text-align: center;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease, transform 0.3s ease;
+    /* 增加 transform 过渡 */
+}
+
+footer:hover {
+    background: var(--bg-darker);
+    transform: translateY(-2px);
+    /* 增加 hover 效果 */
+}
+
+footer a {
+    color: #f7fafc;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}

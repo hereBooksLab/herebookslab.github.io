@@ -1,0 +1,20 @@
+:root {
+    --primary-color: #2c3e50;
+    --primary-gradient: linear-gradient(135deg, #34495e 0%, #2c3e50 100%);
+    /* 调整颜色 */
+    --secondary-color: #3498db;
+    --secondary-gradient: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    /* 调整颜色 */
+    --accent-color: #e74c3c;
+    --accent-gradient: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+    /* 调整颜色 */
+    --bg-light: #ecf0f1;
+    --card-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.15);
+    --bg-darker: #2c3e50;
+    --bg-dark: #34495e;
+    /* 调整阴影 */
+    --text-primary: #333333;
+    --text-secondary: #777777;
+
+
+}
