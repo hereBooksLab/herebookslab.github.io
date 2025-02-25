@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://onetohi.com/sitemap.xml

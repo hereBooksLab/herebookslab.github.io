@@ -4,93 +4,133 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>一行十文化 | 让信息更透明 - 简讯通、在地答、文化微尘</title>
-    <meta name="keywords" content="一行十文化,文化传播,数字人文,简讯通,在地答,文化微尘" />
-    <meta name="description" content="杭州一行十文化传播有限公司旗下创新产品：简讯（信息提纯专家）与在地答（智能位置问答社区），用科技重塑信息获取方式" />
-    <link rel="canonical" href="https://onetohi.com" />
-    <link rel="alternate" hreflang="zh-CN" href="https://onetohi.com" />
+    <title>一行十文化 | 用科技让信息更纯粹 - 一语万象·嘀嗒胶囊·文化微尘</title>
 
-    <!-- Open Graph Tags -->
-    <meta property="og:title" content="一行十文化 - 让信息更透明" />
-    <meta property="og:description" content="了解一行十文化旗下【一语万象】、【嘀嗒胶囊】、【文化微尘】等产品，用科技赋能文化传播，让信息更透明，文化更触手可及。" />
+    <!-- SEO Meta Tags -->
+    <meta name="keywords" content="一行十文化,信息提纯,位置问答,文化传播,一语万象,嘀嗒胶囊,文化微尘,AI信息处理" />
+    <meta name="description" content="一行十文化致力于用科技赋能文化传播，【一语万象】3秒提炼文章核心，【嘀嗒胶囊】打造智能化位置问答社区，让信息更透明，文化更触手可及。" />
+    <meta name="author" content="杭州一行十文化传播有限公司" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="一行十文化 - 用科技让信息更纯粹" />
+    <meta property="og:description" content="发现一行十文化旗下创新产品：一语万象让您3秒读懂核心，嘀嗒胶囊帮您获取目的地第一手信息，用科技让信息获取更高效。" />
     <meta property="og:image" content="https://onetohi.com/favicon.ico" />
-    <meta property="og:type" content="website" />
     <meta property="og:url" content="https://onetohi.com" />
+    <meta property="og:site_name" content="一行十文化" />
+    <meta property="og:type" content="website" />
 
-    <!-- JSON-LD 结构化数据 -->
+
+    <!-- 结构化数据优化 -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Organization",
         "name": "杭州一行十文化传播有限公司",
-        "url": "https://one2ten.xyz",
-        "logo": "https://one2ten.xyz/news-icon.svg",
+        "alternateName": "一行十文化",
+        "url": "https://onetohi.com",
+        "logo": "https://onetohi.com/favicon.ico",
         "sameAs": [
-            "https://weibo.com/one2ten-xyz",
-            "https://www.zhihu.com/one2ten-xyz"
+            "https://weibo.com/onetohi",
+            "https://www.zhihu.com/org/onetohi"
         ],
+        "description": "专注于信息提纯与智能化位置问答服务",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "杭州",
+            "addressRegion": "浙江省",
+            "addressCountry": "CN"
+        },
         "contactPoint": [{
             "@type": "ContactPoint",
             "telephone": "+86-192-9581-9619",
             "contactType": "客户服务",
             "areaServed": "CN",
             "availableLanguage": "zh-cn"
-        }]
+        }],
+        "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "产品服务",
+            "itemListElement": [
+                {
+                    "@type": "Offer",
+                    "name": "一语万象",
+                    "description": "信息提纯服务"
+                },
+                {
+                    "@type": "Offer",
+                    "name": "嘀嗒胶囊",
+                    "description": "智能化位置问答社区"
+                }
+            ]
+        }
     }
     </script>
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" as="style"
-        onload="this.rel='stylesheet'" />
-    <noscript>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" />
-    </noscript>
+
+    <!-- 预加载关键资源 -->
+
+    <link rel="canonical" href="https://onetohi.com" />
+    <link rel="alternate" hreflang="zh-CN" href="https://onetohi.com" />
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header class="hero-header" role="banner">
+    <!-- 主横幅区域 -->
+    <header class="hero-header" role="banner" aria-label="网站横幅">
         <div class="hero-content">
             <h1 class="modern-title">
                 创新科技驱动文化传播
-                <span class="gradient-text">一行十文化</span>
+                <span class="gradient-text" aria-hidden="true">一行十文化</span>
             </h1>
-            <p class="modern-subtitle">
-                让信息更透明 · 让文化触手可及
-                <span class="company-tag">杭州一行十文化传播有限公司</span>
+            <p class="modern-subtitle" role="doc-subtitle">
+                让信息更纯粹 · 让文化触手可及
+                <small class="company-tag" aria-label="公司类型">创新型文化科技服务商</small>
             </p>
         </div>
     </header>
 
-    <main class="main-content" role="main">
-        <!-- 产品导航 -->
-        <nav class="product-nav" aria-label="产品导航">
-            <a href="#onetoMore" class="nav-link">一语万象</a>
-            <a href="#onetoHi" class="nav-link">嘀嗒胶囊</a>
-            <a href="#cultureDust" class="nav-link">文化微尘</a>
+    <main class="main-content" role="main" aria-labelledby="main-title">
+        <!-- 主导航 -->
+        <nav class="product-nav" role="navigation" aria-label="产品导航">
+            <ul class="nav-list">
+                <li><a href="#onetoMore" class="nav-link">一语万象</a></li>
+                <li><a href="#onetoHi" class="nav-link">嘀嗒胶囊</a></li>
+                <li><a href="#cultureDust" class="nav-link">文化微尘</a></li>
+            </ul>
         </nav>
 
+        <!-- 产品展示区 -->
         <div class="container">
-            <section class="product-grid">
-                <!-- 产品卡片 -->
-                <article id="onetoMore" class="product-card" itemscope itemtype="http://schema.org/Product">
+            <section class="product-grid" aria-label="产品展示">
+                <!-- 一语万象产品卡片 -->
+                <article id="onetoMore" class="product-card" itemscope itemtype="http://schema.org/SoftwareApplication">
+                    <header class="product-header">
+                        <h2 itemprop="name" id="onetomore-title">一语万象 · OneToMore</h2>
+                        <small class="product-tagline" aria-label="产品标语">3秒洞悉本质，从【一语万象】开始</small>
+                        <span class="badge" itemprop="applicationCategory" role="status">信息提纯</span>
+                    </header>
 
-                    <h2 style="margin: 0" itemprop="name">一语万象 · OneToMore<span class="badge"
-                            itemprop="brand">信息净化</span></h2>
-                    <small style="display: block; font-size: 0.9rem; color: #718096;">三秒洞悉本质，从【一语万象】开始</small>
-
-                    <p itemprop="description">
-                        厌倦了信息过载？<br>【一语万象】职业编辑团队匠心精选，精准提炼新闻核心，将冗长报道浓缩为一句话，彻底打破标题党的桎梏，让您瞬间捕捉关键信息。
-                    </p>
-                    <div class="core-value">
-                        <h3>核心价值：简单有温度</h3>
-                        <p>
-                            我们致力于消除信息噪音，用最简洁的语言传递最有价值的内容，消除认知偏差，让您在碎片时间内即时掌握时事动向，助您在信息爆炸时代保持清醒与高效
-                        </p>
+                    <div class="product-description" itemprop="description">
+                        <h3 class="visually-hidden">厌倦了标题党？</h3>
+                        <ul class="feature-list" role="list">
+                            <li>职业编辑匠心提炼：一句话精准获取新闻内核</li>
+                            <li>多维度验证：交叉对比，确保信息可靠</li>
+                            <li>个性化推送：定制您的智慧资讯空间</li>
+                        </ul>
                     </div>
-                    <ul style="list-style: none; padding: 0">
-                        <li>✅ AI 可信度评级</li>
-                        <li>✅ 多源信息验证</li>
-                        <li>✅ 每日新闻简报</li>
+
+                    <aside class="core-value" aria-labelledby="core-value-title">
+                        <h3 id="core-value-title">核心价值：简单有温度</h3>
+                        <p>我们致力于消除信息噪音，用最简洁的语言传递最有价值的内容，消除认知偏差，让您在碎片时间内即时掌握时事动向，助您在信息爆炸时代保持清醒与高效
+                        </p>
+                    </aside>
+
+                    <ul class="feature-list">
+                        <li>🎯 专业提取文章核心</li>
+                        <li>🔍 多源验证保障可靠</li>
+                        <li>📱 随时随地获取精华</li>
                     </ul>
+
                     <blockquote>"终于不用在冗长文章里找重点了！" —— 用户张先生</blockquote>
                     <div class="qr-section">
                         <img loading="lazy"
@@ -100,20 +140,30 @@
                     </div>
                 </article>
 
-                <article id="onetoHi" class="product-card" itemscope itemtype="http://schema.org/Product">
-                    <h2 style="margin: 0" itemprop="name">嘀嗒胶囊 · OneToHi</h2>
+                <!-- 嘀嗒胶囊产品卡片 -->
+                <article id="onetoHi" class="product-card" itemscope itemtype="http://schema.org/SoftwareApplication">
+                    <header class="product-header">
+                        <h2 itemprop="name" id="onetohi-title">嘀嗒胶囊 · OneToHi</h2>
+                        <small class="product-tagline" aria-label="产品标语">与世界全方位零距离互动，出行决策更明智</small>
+                        <span class="badge" itemprop="applicationCategory" role="status">位置智能</span>
+                    </header>
 
-                    <small style="display: block; font-size: 0.9rem; color: #718096;">与世界全方位零距离互动，出行决策更明智</small>
-                    <span class="badge" itemprop="brand">位置智能</span>
-                    <p itemprop="description">
-                        出行前想知道目的地实况？<br>【嘀嗒胶囊】融合实时定位与智能推送，将您的问题精准投递至目的地，实时为您呈现来自当地的第一手信息，为您的出行决策提供可靠依据。
-                    </p>
-                    <div class="core-value">
-                        <h3>核心价值：行程未启，信息先行</h3>
-                        <p>
-                            利用先进 LBS 技术打破空间壁垒，将问题胶囊与地理位置紧密结合，实时推送给当地用户，让您第一时间与目的地隔空互动
-                        </p>
+                    <div class="product-description" itemprop="description">
+                        <h3 class="visually-hidden">出行前想知道目的地实况？</h3>
+                        <ul class="feature-list" role="list">
+                            <li>精准投放：融合实时定位与智能推送，问题直达目标位置</li>
+                            <li>实时互动：实时为您呈现来自当地的第一手信息</li>
+                            <li>智能匹配：优质回答优先展示，出行决策提供可靠依据</li>
+                        </ul>
                     </div>
+
+                    <aside class="core-value" aria-labelledby="core-value-title">
+                        <h3 id="core-value-title">核心价值：行程未启，信息先行</h3>
+                        <p>
+                            突破地域限制，将问题胶囊与地理位置紧密结合，让问题精准触达目的地当地用户。基于LBS和AI技术，让您第一时间与目的地隔空互动，为您提供最真实、最及时的本地信息。
+                        </p>
+                    </aside>
+
                     <ul style="list-style: none; padding: 0">
                         <li>🌍 随时随地，跨空间交流</li>
                         <li>👥 匿名互动，保护隐私</li>
@@ -133,8 +183,8 @@
 
     <footer class="modern-footer" role="contentinfo">
         <div class="footer-content">
-            <p class="footer-tagline">数字人文探索者 · 让每个信息节点产生价值</p>
-            <p class="copyright">© 2025 OneToMore & OneToHi · 让复杂世界变简单</p>
+            <p class="footer-tagline" role="doc-subtitle">用科技连接信息与人 · 让获知更有效率</p>
+            <small class="copyright" role="contentinfo">© 2025 一行十文化 · 让复杂世界变简单</small>
         </div>
     </footer>
 </body>
