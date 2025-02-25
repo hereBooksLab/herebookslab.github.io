@@ -1,5 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
 @import url('_variables.css');
 @import url('_mixins.css');
+
+/* 全局基础样式 */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 /* 动画效果 */
 @keyframes fadeUp {
@@ -14,15 +24,49 @@
     }
 }
 
+/* 优化动画效果 */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 8px var(--secondary-color);
+    }
+
+    50% {
+        box-shadow: 0 0 20px var(--accent-color);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
 /* 基本样式 */
 body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.7;
-    /* 调整行高 */
+    font-family: var(--font-sans);
+    background: var(--bg-gradient);
     color: var(--text-primary);
-    margin: 0;
-    background: var(--bg-light);
-    scroll-behavior: smooth;
+    line-height: 1.7;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -30,27 +74,23 @@ body {
 header.hero-header {
     background: var(--primary-gradient);
     color: white;
-    padding: 7rem 2rem;
+    padding: 6rem 2rem;
     text-align: center;
-    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
-    /* 调整阴影 */
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    box-shadow: var(--shadow-md);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
-    /* 增加 transform 过渡 */
 }
 
 header.hero-header:hover {
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
-    /* 调整阴影 */
+    box-shadow: var(--shadow-lg);
     transform: translateY(-3px);
-    /* 增加 hover 效果 */
 }
 
 header.hero-header h1 {
     font-size: 3.5rem;
     margin: 0;
-    letter-spacing: 2px;
+    letter-spacing: 1.5px;
+    /* 优化间距 */
     font-weight: 700;
 }
 
@@ -58,7 +98,82 @@ header.hero-header p {
     font-size: 1.3rem;
     margin-top: 1rem;
     color: rgba(255, 255, 255, 0.85);
-    /* 调整颜色 */
+}
+
+/* 现代化风格 */
+.modern-header {
+    background: var(--primary-gradient);
+    color: white;
+    padding: 6rem 2rem;
+    text-align: center;
+    clip-path: polygon(0 0, 100% 0, 100% 92%, 0 100%);
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.25);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.modern-header:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.35);
+    transform: translateY(-3px);
+}
+
+.modern-title {
+    font-size: clamp(2.8rem, 6vw, 4.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    animation: float 6s ease-in-out infinite;
+}
+
+.modern-subtitle {
+    font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+    font-weight: 500;
+    opacity: 0.9;
+    transition: opacity 0.3s ease;
+}
+
+.modern-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3.5rem;
+}
+
+.modern-section {
+    max-width: 1280px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.modern-card {
+    padding: 1.5rem;
+    border: none;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.modern-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+}
+
+.modern-footer {
+    background: var(--bg-dark);
+    color: #fff;
+    padding: 2.5rem 2rem;
+    text-align: center;
+}
+
+a.modern-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a.modern-link:hover {
+    color: #fff;
 }
 
 /* 主内容区：产品网格 */
@@ -70,75 +185,90 @@ main {
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 3.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding: 3rem 2rem;
 }
 
 /* 产品卡片样式 */
 article.product-card {
-    background: white;
-    border-radius: 24px;
-    padding: 3rem;
-    box-shadow: var(--card-shadow);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-    animation: fadeUp 0.6s ease-out forwards;
+    background: var(--card-gradient);
+    border-radius: var(--border-radius-lg);
+    border: var(--border-light);
+    padding: 2rem;
+    /* 稍微减少内边距，突出简洁 */
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-bounce);
+    animation: slideInUp 0.5s ease-out forwards;
+    backdrop-filter: blur(8px);
 }
 
 article.product-card:hover {
-    transform: translateY(-8px);
-    /* 调整 hover 效果 */
-    box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.3);
-    /* 调整阴影 */
+    transform: translateY(-8px) scale(var(--scale-hover));
+    /* 保持动效顺畅 */
+    box-shadow: var(--shadow-lg);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.98));
 }
 
 /* 徽章样式 */
 .badge {
     background: var(--accent-gradient);
     color: white;
-    padding: 0.6rem 1.2rem;
-    border-radius: 20px;
-    font-size: 1rem;
-    display: inline-block;
-    margin-bottom: 1.2rem;
+    padding: 0.5rem 1.2rem;
+    border-radius: 1.5rem;
     font-weight: 500;
-    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.3);
-    /* 调整阴影 */
-    transition: transform 0.3s ease;
-    /* 增加 transform 过渡 */
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    box-shadow: var(--shadow-sm);
+    animation: glow 2s ease-in-out infinite alternate;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all var(--transition-base);
 }
 
 .badge:hover {
-    transform: scale(1.1);
-    /* 增加 hover 效果 */
+    transform: scale(1.1) translateY(-2px);
+    box-shadow: 0 8px 16px rgba(var(--accent-color), 0.25);
 }
 
 /* 核心价值显示 */
 .core-value {
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 1.2rem;
+    margin: 1.5rem 0;
     border-left: 4px solid;
     border-image: var(--secondary-gradient) 1;
-    padding: 1.7rem 2.2rem;
-    margin: 2.2rem 0;
-    background: var(--bg-light);
-    border-radius: 0 12px 12px 0;
 }
 
 /* 二维码区样式 */
 .qr-section {
-    background: white;
-    border-radius: 16px;
-    padding: 2.2rem;
+    background: #fff;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
     text-align: center;
-    margin-top: 2.2rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
-    /* 调整阴影 */
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    transition: all var(--transition-bounce);
 }
 
 .qr-section:hover {
-    transform: scale(1.04);
-    /* 调整 hover 效果 */
-    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.15);
-    /* 调整阴影 */
+    transform: scale(var(--scale-hover));
+    box-shadow: var(--shadow-md);
+}
+
+.qr-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: var(--accent-gradient);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+    z-index: -1;
+}
+
+.qr-section:hover::before {
+    opacity: 0.05;
 }
 
 /* 引用样式 */
@@ -150,14 +280,53 @@ blockquote {
     border-radius: 0 12px 12px 0;
     font-style: italic;
     color: var(--text-secondary);
-    transition: background 0.3s ease, transform 0.3s ease;
-    /* 增加 transform 过渡 */
+    transition: background 0.35s ease, transform 0.35s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+blockquote::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    font-size: 4em;
+    color: rgba(var(--accent-color), 0.1);
+    font-family: serif;
 }
 
 blockquote:hover {
     background: #eef2f6;
     transform: translateX(5px);
-    /* 增加 hover 效果 */
+}
+
+/* 增加全局过渡 */
+a,
+button {
+    transition: color 0.25s ease, background 0.25s ease;
+}
+
+/* 优化链接过渡效果 */
+.nav-link {
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: color var(--transition-base);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--accent-gradient);
+    transform: scaleX(0);
+    transition: transform var(--transition-base);
+}
+
+.nav-link:hover::after {
+    transform: scaleX(1);
 }
 
 /* 响应式优化 */
@@ -168,63 +337,27 @@ blockquote:hover {
     }
 
     header.hero-header {
-        padding: 5rem 1rem;
+        padding: 4rem 1rem;
     }
 
     header.hero-header h1 {
         font-size: 3rem;
     }
 
+    .product-grid {
+        grid-template-columns: 1fr;
+        padding: 2rem 1rem;
+    }
+
     article.product-card {
-        padding: 2rem;
+        padding: 1.5rem;
+    }
+
+    .modern-title {
+        font-size: 2.8rem;
     }
 
     .product-grid {
-        gap: 2.5rem;
+        gap: 2rem;
     }
-}
-
-/* 新增动效：产品图标效果 */
-.product-icon {
-    width: 70px;
-    height: 70px;
-    margin-bottom: 1.7rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.12);
-    /* 调整阴影 */
-}
-
-article.product-card:hover .product-icon {
-    transform: scale(1.2) rotate(7deg);
-    /* 调整 hover 效果 */
-    box-shadow: 0 9px 18px rgba(0, 0, 0, 0.18);
-    /* 调整阴影 */
-}
-
-/* 页脚样式 */
-footer {
-    background: var(--bg-dark);
-    color: #f0f0f0;
-    padding: 2.5rem;
-    text-align: center;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
-    transition: background 0.3s ease, transform 0.3s ease;
-    /* 增加 transform 过渡 */
-}
-
-footer:hover {
-    background: var(--bg-darker);
-    transform: translateY(-2px);
-    /* 增加 hover 效果 */
-}
-
-footer a {
-    color: #f7fafc;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #ffffff;
 }
