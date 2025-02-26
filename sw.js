@@ -1,5 +1,5 @@
 // --- 缓存配置 ---
-const CACHE_NAME = "site-cache-v5";
+const CACHE_NAME = "site-cache-v6";
 const URLS_TO_CACHE = [
   "/",
   "/index.html",
